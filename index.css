@@ -1,1 +1,97 @@
 /* Put your style information here! */
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+}
+
+main {
+    margin: 0 auto;
+    padding: 30px 140px 0 140px;
+    background-color: white;
+    max-width: 2400px;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 1.2em;
+    font-weight: 700;
+    display: inline;
+    margin-right: 5px;
+}
+
+h2 {
+    margin-top:50px;
+    font-size:1.5em;
+}
+
+p {
+    line-height: 1.5em;
+    display: block;
+}
+
+.section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.oven {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%
+}    
+
+.flex-container{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.personas {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.storyboard{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .flex-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .personas {
+        width: 600px;
+        height: auto;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .flex-container{
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+}
+  
+.accent{
+    color: skyblue;
+}
