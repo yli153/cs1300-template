@@ -1,11 +1,23 @@
 /* Put your style information here! */
+/* piazzolla-regular - latin */
+@font-face {
+    font-family: 'Piazzolla';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Piazzolla'),
+         url('./fonts/piazzolla-v2-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('./fonts/piazzolla-v2-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
 * {
     padding: 0;
     margin: 0;
     font-size: 1em;
 }
 
+
 main {
+    font-family: "Piazzolla", sans-serif;
     margin: 0 auto;
     padding: 30px 140px 0 140px;
     background-color: white;
@@ -30,20 +42,25 @@ p {
     display: block;
 }
 
+.intro {
+    color: darkslategray;
+}
+
 .section {
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
 .section-head {
-    background-color: snow;
+    background-color: #fdf0f2;
+    padding: 3px;
 }
 
 .oven {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 80%
+    width: 90%
 }    
 
 .flex-container{
@@ -59,7 +76,7 @@ p {
 
 .personas {
     width: 100%;
-    max-width: 600px;
+    max-width: 900px;
     height: auto;
     margin-bottom: 10px;
     padding: 10px;
