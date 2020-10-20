@@ -1,5 +1,5 @@
 /* Put your style information here! */
-/* piazzolla-regular - latin */
+/* Book Antiqua */
 @font-face {
     font-family: 'Book Antiqua';
     src: url('./fonts/book-antiqua.ttf') format('ttf');
@@ -15,7 +15,7 @@
 main {
     font-family: "Book Antiqua", Arial, Helvetica, sans-serif;
     margin: 0 auto;
-    padding: 30px 120px 0 120px;
+    padding: 30px 100px 0 100px;
     background-color: white;
     min-height: 100vh;
 }
@@ -30,10 +30,14 @@ h3 {
 }
 
 h5 {
-    padding: 5px !important;
     font-size: 1.4vw !important;
-    margin-bottom: 20px !important;
+    margin-bottom: 1vw !important;
     color: #332e30;
+}
+
+p {
+    margin-bottom: 1vw !important;
+    font-size: 1.2vw !important;
 }
 
 .section {
@@ -43,22 +47,22 @@ h5 {
 .buttons-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 15px;
+    margin-bottom: 1vw;
 }
 
 .section-button {
     border: 3px solid rgb(205, 180, 190);
     background-color: white;
     color: black;
-    margin-top: 5px;
-    margin-right: 20px;
-    padding: 5px;
-    border-radius: 8px;
+    margin-top: 0.5vw;
+    margin-right: 2vw;
+    padding: 0.5vw;
+    border-radius: 0.8vw;
     font-size: 1vw;
 }
 
 .section {
-    margin-top: 50px;
+    margin-top: 2.5vw;
 }
 
 .section-button:hover {
@@ -66,14 +70,28 @@ h5 {
     background-color: rgba(205, 180, 190, 0.8);
 }
 
-.image-container {
+.usability-container {
     display: flex;
+}
+
+.usability-column {
+    flex: 50%;
     flex-direction: column;
-    margin-left: 15px;
+    margin-right: 0 !important;
+}
+
+.usability-img {
+    width: 95%;
+    height: auto;
+}
+
+.acc-img {
+    width: 90%;
+    height: auto;
 }
 
 .original-website {
-    width: 70%;
+    width: 90%;
     height: auto;
 }
 
@@ -105,9 +123,9 @@ h5 {
     display: none;
     position: fixed;
     bottom: 20px;
-    right: 40px;
+    right: 6%;
     z-index: 99;
-    font-size: 18px;
+    font-size: 2vw;
     border: none;
     outline: none;
     background-color: darkgrey;
@@ -138,3 +156,61 @@ h5 {
 .carousel-indicators {
     filter: invert(100%);
 }
+
+@media only screen and (min-width: 640px) and (max-width: 870px) {
+    main {
+        font-family: "Book Antiqua", Arial, Helvetica, sans-serif;
+        margin: 0 auto;
+        padding: 30px 30px 0 30px;
+        background-color: white;
+        min-height: 100vh;
+    }
+
+    .section-button {        
+        font-size: 8px;
+    }
+}
+
+@media only screen and (min-width: 420px) and (max-width: 640px) {
+    main {
+        font-family: "Book Antiqua", Arial, Helvetica, sans-serif;
+        margin: 0 auto;
+        padding: 30px 30px 0 30px;
+        background-color: white;
+        min-height: 100vh;
+    }
+
+    .section-button {        
+        font-size: 5px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+    main {
+        font-family: "Book Antiqua", Arial, Helvetica, sans-serif;
+        margin: 0 auto;
+        padding: 30px 20px 0 20px;
+        background-color: white;
+        min-height: 100vh;
+    }
+
+    .section-button {        
+        font-size: 3.5px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    main {
+        font-family: "Book Antiqua", Arial, Helvetica, sans-serif;
+        margin: 0 auto;
+        padding: 30px 20px 0 20px;
+        background-color: white;
+        min-height: 100vh;
+    }
+
+    .section-button {        
+        font-size: 3px;
+    }
+
+}
+

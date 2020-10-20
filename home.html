@@ -1,7 +1,8 @@
 <!doctype html>
 
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
     <title>Responsive Redesign</title>
     <link rel="stylesheet" href="index.css">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -15,7 +16,7 @@
   <body>
     <main>
       <h1 style="text-align: center; color: #6c6581"><strong>Reimaging Authentic Italian Food in Providence</strong></h1>
-      <h3 style="text-align: center; color: #CE7C7A; margin-bottom: 15px;"><strong>Redesign of Andino's Menu Page</strong></h3>
+      <h3 style="text-align: center; color: #CE7C7A; margin-bottom: 1vw;"><strong>Redesign of Andino's Menu Page</strong></h3>
 
       <div class="buttons-container">
         <div class="menu-buttons">
@@ -27,14 +28,15 @@
         </div> 
     </div>
          
-      <p style="font-size: 1.2vw;">Andino's is one of my favorite Italian restaurants in Federal Hill, Providence. However, I have always found its menu page hard to navigate. To both improve my own user experience and help
+      <p style="font-size: 1.3vw;">Andino's is one of my favorite Italian restaurants in Federal Hill, Providence. However, I have always found its menu page hard to navigate. To improve my own user experience and help
          the restaurant attract more traffic, I decide to redesign Andino's Menu page.
       </p>
 
       <div class="section" id="usability">
         <h5><strong>I. Original Website: Usability and Accessibility Problems</strong></h5>
-        <div class="row">
-          <div class="image-container">
+        <h6 style="text-align: center; background-color: #cdb4be; padding: 1vw; color: white; font-size: 1.2vw"><strong>Usability Problems</strong></h6>
+        <div class="usability-container align-items-stretch" style="margin-bottom: 20px;">
+          <div class="usability-column">
             <img class="original-website" src="images/original1.png" alt="original website">
             <img class="original-website" src="images/original2.jpg" alt="original website">
             <img class="original-website" src="images/original3.png" alt="original website">
@@ -42,20 +44,42 @@
             <img class="original-website" src="images/original5.png" alt="original website">
           </div>
 
-          <div class="usability-container">
-            <p></p>
+          <div class="usability-column">
+            <p>Here is the <a href=https://andinosprovidence.com/andinos-menus.html>original menu page</a> of Andino's. For users, their goal of using this page is to see what menu items, 
+              foods and drinks are offered by Andino's and then to decide whether they want to go to the restaurant. Currently, the page allows users to view six different menus in PDF formats.</p>
+            <p>I then conducted usability analysis with respect to learnability, efficiency and memorability to identify problems. </p>
+            <p>In general, it is <strong>difficult for users to figure out and remember what is clickable on this page</strong>. Users need to <strong>intentionally look for information and the 
+              design of the website seems outdated.</strong></p>
+            <img class="usability-img" src="prototypes/Usability_Problems.jpg" alt="usability problems">
+            </div>
+        </div>
 
+        <h6 style="text-align: center; background-color: #cdb4be; padding: 1vw; color: white; font-size: 1.2vw"><strong>Accessbility and Screen Reader Analysis</strong></h6>
+        <div class="usability-container">
+          <div class="usability-column">
+            <img class="acc-img" src="prototypes/accessbility.png" alt="accessbility result">
           </div>
 
+          <div class="usability-column">
+            <p><strong>There is no significant accessbility concerns found, except for:</strong></p>
+            <ul style="font-size: 1.2vw; margin-left: 1.2vw;">
+              <li>The <strong>low contrast between text and background colors</strong> is the biggest accessibility issue, with 44 related errors identified. </li>
+              <li>There are a few redundant links and text on the website which raise alerts.</li>
+              <li>Some of the images are missing alternative text and language is not specified for the page. </li>
+            </ul>
+            <br>
+            <p>I then use <strong>JAWS Screen Reading Software</strong> to further assess the menu page. The screen reader is able to recognize the text “Andino’s Menu”, the heading “Make a Reservation” and the “Find a Table” 
+              and “Order Online” buttons. Other than those, it repeats “unlabeled graphics” and “left parent placeholder, right parent graphic”. The design of the menu page is not very friendly to the screen reader 
+              due to the lack of alternative text for images and written information. </p>
+          </div>
         </div>
-       
       </div>
 
       <div class="section" id="lo-fi">
         <h5><strong>II. Low-Fidelity Wireframes: Responsiveness and Improvements</strong></h5>
         <p>Using Balsamiq, I sketched three low-fidelity wireframes for Andino's Menu Page in Desktop, Tablet and Phone View. While the navigation bar, footer section and the favorite menu item section are laid out
-          differently in smaller screen sizes, most of the design remains the same in all three views despite changes in font size, margins and paddings. Annotations are made next to different elements to explain where and how my
-          design solve the usability problems of the original website. </p>
+          differently in smaller screen sizes, most of the design remains the same despite changes in font size, margins and paddings. Annotations are made next to different elements to explain where and how my
+          design solve the aforementioned usability problems.</p>
         <h6 style="text-align: center; background-color: #cdb4be; padding: 1vw; color: white; font-size: 1.2vw"><strong>Desktop View</strong></h6>
         <img class="wireframe" style="width: 80%" src="prototypes/lofi_annotated_desktop.png" alt="lo-fi wireframe for desktop view">
         
@@ -88,9 +112,8 @@
           
             </div>
         </div>
-        
-        
-        <h6 style="text-align: center; background-color: #cdb4be; padding: 1vw; color: white; font-size: 1.2vw"><strong>Annotations (click "next/prev" arrows or the slide bar to see all)</strong></h6>
+
+        <h6 style="text-align: center; background-color: #cdb4be; padding: 1vw; color: white; font-size: 1.2vw"><strong>Annotated Prototypes (click "next/prev" arrows or the slide bar to see all)</strong></h6>
         <div id="carousel-annotate" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carousel-annotate" data-slide-to="0" class="active"></li>
@@ -133,7 +156,7 @@
             <span class="sr-only">Next</span>
           </a>
        </div> 
-       <h6 style="text-align: center; background-color: #cdb4be; padding: 1vw; color: white; font-size: 1.2vw; margin-top: 15px;"><strong>Elements that are Different in Tablet/Phone View</strong></h6> 
+       <h6 style="text-align: center; background-color: #cdb4be; padding: 1vw; color: white; font-size: 1.2vw; margin-top: 15px;"><strong>Elements that are Laid out Differently in Tablet/Phone View</strong></h6> 
        <div class="row">
         <div class="column">
            <img style="width: 100%; border: 2px solid #cdb4be" src="prototypes/Hi-Fi8.jpg" alt="hi-fi prototype for smaller screens">
@@ -145,24 +168,46 @@
       </div>
 
       <div class="section" id="redesigned-page">
-        <h5><strong>IV. Redesigned Menu Page</strong></h5>
+        <h5><strong>IV. Redesigned Menu Page <a href="https://redesigned-menu-page.herokuapp.com/"> (HERE)</a></strong></h5>
         <p>Click <a href="https://redesigned-menu-page.herokuapp.com/">HERE</a> to see the redesigned menu page for Andino's!</p>
-        <p>Observations upon testing using different tools:</p>
+        <h6 style="text-align: center; background-color: #cdb4be; padding: 1vw; color: white; font-size: 1.2vw"><strong>Obsevations and Accessibility Test Result</strong></h6>
+        <div class="usability-container">
+          <div class="usability-column">
+            <img class="acc-img" src="prototypes/new_accessibility.PNG" alt="new accessbility result">
+          </div>
+
+          <div class="usability-column">
+            <p>I have tested my redesigned website with Chrome Responsive Tool and confirmed that it <strong>works with any screen size on any device</strong>. 
+              My redesigned website also works any font size, including 150% font size on the tablet screen. All font and image sizes, paddings and margins 
+            adjust accordingly to fit different screen size, and the same level of eligiblity of information is preserved.</p>
+            <p>I tried WebAIM WAVE on different screen sizes and there are much fewer accessbility concerns compared to the original website.</p>
+            <p>The only error is due to the responsiveness design of the navigation bar where the Andino's logo is in the middle when the screen width is 
+              at least 992px and on the leftmost otherwise. Thus, there is a hidden logo in the top-left corner.</p>
+            <p>The only contrast error is due to the "LUNCH" menu button. After playing around with the transparency 
+              and contrast of the background color yet getting unsatisfactory outcomes, I decided to keep it as it is to match the color scheme.</p>
+            <p>The alerts are due to underlined text and skipped heading level.</p>
+          
+          </div>
+        </div>
+
       </div>
       
       <div class="section" id="style-guide">
         <h5><strong>V. Visual Design Style Guide</strong></h5>
-        <p>Here is the style guide for my design which provides guidance for the color scheme, buttons, typography, logos, icons and other interactive elements implemented.</p>
-        <img class="guide" src="prototypes/StyleGuide.jpg" src="visual design style guide">
+        <p>Here is the style guide for my design which provides guidance for the color scheme, buttons, typography, logos, icons and other interactive elements.</p>
+        <img class="guide" src="prototypes/StyleGuide.jpg" alt="visual design style guide">
       </div>
 
-      <div class="section" id="style-guide">
+      <div class="section">
         <h5><strong>VI. Citations</strong></h5>
-        <p></p>
-       
+        <ol style="font-size: 1.2vw; margin-left: 1.2vw;">
+          <li>All menus, images and restaurant logos are from the original website: <a href="https://andinosprovidence.com/andinos-menus.html">Andino's Menu Page.</a></li>
+          <li>The original website is referenced and redesigned for nonprofit educational purpose and all work presented is <strong>not</strong> of commercial nature.</li>
+          <li><a href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">Bootstrap v4.5.2</a>, <a href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">Font Awesome</a>, script from
+              <a href="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">JS Foundation</a> and script from <a href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+              Federico Zivolo</a> are used in redesigning the website.</li>
+        </ol>
       </div>
-
-
 
       <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
         <script>
