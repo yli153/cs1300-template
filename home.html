@@ -22,28 +22,28 @@
             </div>
             <div class="col-md-6 my-auto">
               <h1 style="text-align: center; color: black;">Which UI design is better?</h1>
-              <h2 style="text-align: center; color: #679267;; margin-bottom: 1vw;"><strong>A/B Testing</strong></h2>
+              <h2 style="text-align: center; color: #4d814a;; margin-bottom: 1vw;"><strong>A/B Testing</strong></h2>
             </div>
         </div>
       </div>
 
 
       <!-- A grey horizontal navbar that becomes vertical on small screens -->
-      <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top" style="margin-bottom: 0.5vw;">
+      <nav class="navbar navbar-expand-sm bg-light navbar-light sticky-top">
       <!-- Links -->
-        <ul class="navbar-nav flex-fill justify-content-center">
-          <li class="nav-item"><a class="nav-link" href="#task">Task Setup</a></li>
-          <li class="nav-item"><a class="nav-link" href="#hypothesis">Hypothesis</a></li>
-          <li class="nav-item"><a class="nav-link" href="#data">Data Collection</a></li>
-          <li class="nav-item"><a class="nav-link" href="#conclusion">Conclusion & Takeaways</a></li>
+        <ul class="navbar-nav nav-fill w-100 justify-content-center">
+          <li class="nav-item"><a class="nav-link" href="#task"><strong>Task Setup</strong></a></li>
+          <li class="nav-item"><a class="nav-link" href="#hypothesis"><strong>Hypothesis</strong></a></li>
+          <li class="nav-item"><a class="nav-link" href="#data"><strong>Data Collection & Processing</strong></a></li>
+          <li class="nav-item"><a class="nav-link" href="#conclusion"><strong>Conclusion & Takeaways</strong></a></li>
         </ul>
       </nav>
     
       <div class="section" id="task">
         <h3><strong>I. Task Setup</strong></h3>
-        <p>A/B testing is a powerful tool when used in conjunction with statistical analysis in user interface design. It allows us to understand how variations in our design effect user experience.
-           To better understand how A/B testing works, I modified an given online cactus shopping website into versions A and B and collected user data for statistical analysis afterwards. Users were then 
-           given a <a href="https://infinite-waters-93055.herokuapp.com/">link</a> to the website with equal probability of getting version A (left) or B (right). 
+        <p>A/B testing is a powerful tool in user interface design. It allows us to understand how variations in our design affect user experience. To understand how A/B testing works, 
+          I modified an given online cactus shopping website into versions A and B and collected user data for statistical analysis. Users were given a 
+          <a href="https://infinite-waters-93055.herokuapp.com/">link</a> to the website with equal probability of getting version A (left) or B (right). 
         </p>
         <div class="row" style="margin-bottom: 0.5vw;">
           <div class="col-md-6 my-auto">
@@ -54,7 +54,7 @@
           </div>
         </div>
 
-        <p><strong>The changes I made in both versions A and B with respect to the original website are:</strong></p>
+        <p><strong>Changes I made to both interface A and B are:</strong></p>
         <ul style="margin-left: 1.5vw">
           <li>The wording of the primary headline was changed from “Cact-I + Cact-You = Cact-Us” to “Cact-I + Cact-U = Cact-Us”.</li>
           <li>The color of the secondary headline "An online succuulent store for your inner plant lady" was changed to <span style="color: darkolivegreen">dark olive green</span>.</li>
@@ -62,7 +62,7 @@
           <li>The paddings are adjusted so that the headlines and the cactus images are aligned.</li>
         </ul>
 
-        <p><strong>The changes I made that are different in versions A and B include:</strong></p>
+        <p><strong>Changes I made that are different in interface A and B include:</strong></p>
         <ul style="margin-left: 1.5vw">
           <li>Version A: I used a grid to wrap the four cactus products and added "col-sm-6" so that the grid becomes 2×2 (i.e., 2 columns per row). I also moved the shopping cart icon
             to the center of the page and immediately beneath the grid of cactus products.</li>
@@ -73,9 +73,52 @@
 
       <div class="section" id="hypothesis">
         <h3><strong>II. Hypothesis</strong></h3>
-        <p></p>
+        <p>The task for users is to order at least $150 of cacti. I then wonder: which UI design is better? Will there be any differences in how users interact with each?</p>
+        <p><strong>The two metrics to be investigated are:</strong></p>
+        <ol style="margin-left: 1.5vw">
+        <li><strong>Time to Completion</strong>: the time it takes to complete the desired task (in this case, order cacti)</li>
+        <li><strong>Return Rate</strong>: whether a user returned to the page or not (i.e., a categorical variable)</li>
+        </ol>
+        <p><strong>Since one metric is continuous and the other is categorical, I select the statistical test for each accordingly and formulate the following hypothesis:</strong></p>
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th scope="col" style="width:20%"></th>
+              <th scope="col" style="width:40%; background-color: #dfecde">Time to Completion</th>
+              <th scope="col" style="width:40%; background-color: #dfecde">Return Rate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" style="background-color: #dfecde">Statistical Test Used</th>
+              <td>2-sample t-test (one-sided)</td>
+              <td>Chi-squared test</td>
+            </tr>
+            <tr>
+              <th scope="row" style="background-color: #dfecde">Null Hypothesis</th>
+              <td>H<sub>0</sub>: Users of A and B spend the same time to completion on average, meaning that interface A and B are equally good.</td>
+              <td>H<sub>0</sub>: There is no association between which interface is used and the return rate, meaning that the return rate is the same for interface A and B.</td>
+            </tr>
+            <tr>
+              <th scope="row" style="background-color: #dfecde">Alternative Hypothesis</th>
+              <td>H<sub>A</sub>: Users of A will spend a longer time to completion on average, meaning that interface B is better than A.</td>
+              <td>H<sub>A</sub>: There is association between which interface is used and the return rate, meaning that the return rate is different for interface A and B.</td>
+            </tr>
+            <tr>
+              <th scope="row" style="background-color: #dfecde">Reasoning of the Hypothesis</th>
+              <td>tbd</td>
+              <td>tbd</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
+      <div class="section" id="data">
+        <h3><strong>III. Data</strong></h3>
+        <p>In total, 41 valid observations were collected from 40 unique users, one of which interacted with both interface A and B.</p>
+
+      
+        </div>
 
 
 
