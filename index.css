@@ -80,12 +80,12 @@ table {
     height: auto;
 }
 
-.results-container {
-    display: flex;
-}
-
-.results-column {
-    flex: 50%;
+.ab-testing {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto;
 }
 
 #myBtn {
