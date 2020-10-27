@@ -23,7 +23,7 @@ main {
 h1 {
     font-size: 2.75vw !important;
     margin-right: 5px;
-    text-shadow: 0.05em 0.05em grey;
+    text-shadow: 0.07em 0.07em grey;
     text-align: right;
     padding: 1vw;
     margin-bottom: 3px !important;
@@ -35,13 +35,20 @@ h3 {
     color: #60a25c;
 }
 
+h4 {
+    font-size: 1.3vw !important;
+    padding-bottom: 0.5vw;
+    color: #60a25c;
+}
+
+
 .row img {
     margin: auto;
     display: block;
 }
 
 .section {
-    margin-top: 2.5vw;
+    margin-top: 3vw;
 }
 
 .nav-item {
@@ -57,7 +64,28 @@ h3 {
     margin-bottom: 3vw;
 }
 
-p, ul, ol, table {
+p, ul, ol{
     margin-bottom: 1vw !important;
     font-size: 1.2vw !important;
+}
+
+table {
+    margin-bottom: 1vw !important;
+    font-size: 1vw !important;
+}
+
+.logs-img {
+    margin-bottom: 1vw; 
+    display: block; 
+    margin: auto; 
+    width: 100%; 
+    height: auto;
+}
+
+.results-container {
+    display: flex;
+}
+
+.results-column {
+    flex: 50%;
 }

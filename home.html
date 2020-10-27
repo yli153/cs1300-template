@@ -35,7 +35,8 @@
           <li class="nav-item"><a class="nav-link" href="#task"><strong>Task Setup</strong></a></li>
           <li class="nav-item"><a class="nav-link" href="#hypothesis"><strong>Hypothesis</strong></a></li>
           <li class="nav-item"><a class="nav-link" href="#data"><strong>Data Collection & Processing</strong></a></li>
-          <li class="nav-item"><a class="nav-link" href="#conclusion"><strong>Conclusion & Takeaways</strong></a></li>
+          <li class="nav-item"><a class="nav-link" href="#conclusion"><strong>Conclusion</strong></a></li>
+          <li class="nav-item"><a class="nav-link" href="#takeaways"><strong>Takeaways</strong></a></li>
         </ul>
       </nav>
     
@@ -47,10 +48,10 @@
         </p>
         <div class="row" style="margin-bottom: 0.5vw;">
           <div class="col-md-6 my-auto">
-              <img class="cactus-ui" style="width: 100%; height: auto" src="images/versionA.PNG" alt="version A of cactus UI">
+              <img class="cactus-ui" style="width: 100%; height: auto; margin-bottom: 1vw" src="images/versionA.PNG" alt="version A of cactus UI">
           </div>
           <div class="col-md-6 my-auto">
-            <img class="cactus-ui" style="width: 100%; height: auto" src="images/versionB.PNG" alt="version B of cactus UI">
+            <img class="cactus-ui" style="width: 100%; height: auto; margin-bottom: 1vw" src="images/versionB.PNG" alt="version B of cactus UI">
           </div>
         </div>
 
@@ -74,7 +75,7 @@
       <div class="section" id="hypothesis">
         <h3><strong>II. Hypothesis</strong></h3>
         <p>The task for users is to order at least $150 of cacti. I then wonder: which UI design is better? Will there be any differences in how users interact with each?</p>
-        <p><strong>The two metrics to be investigated are:</strong></p>
+        <p><strong>The two metrics of investigation are:</strong></p>
         <ol style="margin-left: 1.5vw">
         <li><strong>Time to Completion</strong>: the time it takes to complete the desired task (in this case, order cacti)</li>
         <li><strong>Return Rate</strong>: whether a user returned to the page or not (i.e., a categorical variable)</li>
@@ -84,8 +85,8 @@
           <thead>
             <tr>
               <th scope="col" style="width:20%"></th>
-              <th scope="col" style="width:40%; background-color: #dfecde">Time to Completion</th>
-              <th scope="col" style="width:40%; background-color: #dfecde">Return Rate</th>
+              <th scope="col" style="width:38%; background-color: #dfecde">Time to Completion</th>
+              <th scope="col" style="width:42%; background-color: #dfecde">Return Rate</th>
             </tr>
           </thead>
           <tbody>
@@ -115,12 +116,59 @@
 
       <div class="section" id="data">
         <h3><strong>III. Data</strong></h3>
-        <p>In total, 41 valid observations were collected from 40 unique users, one of which interacted with both interface A and B.</p>
+        <p>I distributed the deployed Heroku link to my peers and recorded each user's interactions with the interface. The user logs were filtered into the following format for 
+          further analysis:</p>
+        <img class="logs-img" src="images/logs_format.PNG" alt="logs format">
+        <br>
+        <p>I went over the logs user by user, interpreted what each user did on the website, and took out the ones where the user only loaded the page but did nothing. I then calculated 
+          the time to completion for each user session and counted number of users who returned for each interface. In total, 41 valid observations were collected from 40 unique users (one user
+          interacted with both interfaces). There are <strong>19 and 22 data points for interface A and B, respectively</strong>.</p>
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-md-6 my-auto">
+                
+
+                
+              </div>
+              <div class="col-md-6 my-auto">
+                
+              </div>
+            </div>
+          </div>
+      </div>
 
       
+        <div class="section" id="conclusion">
+          <h3><strong>IV. Conclusion</strong></h3>
+          <p>After collecting and processing data, I conducted 2-sample t-test and chi-squared test in python and got the following results:</p>
+
+          <div class="results-container" style="margin-bottom: 20px;">
+            <div class="results-column">
+              <img class="ab-testing" style="width: 80%; height: auto" src="images/ab_testing.png" alt="A/B testing results">
+            </div>
+  
+            <div class="results-column">
+              <h4><strong><u>Time to Completion:</strong></u></h4>
+              <ul style="margin-left: 1.5vw">
+                <li>We <strong>fail to reject the null hypothesis</strong> at the 10% significance level (and thus fail to reject at 5% and 1% levels as well) since <strong>0.18643 > 0.10</strong>.</li> 
+                <li>There is no sufficient evidence to conclude the alternative.</li> 
+                <li>Therefore, interface A and B are <strong><u>not</u></strong> statistically significantly different in terms of time to completion.</li></ul>
+                <br>
+                <h4><strong><u>Return Rate:</strong></u></h4>
+                <ul style="margin-left: 1.5vw">
+                <li>We <strong>fail to reject the null hypothesis</strong> at the 10% significance level (and thus fail to reject at 5% and 1% levels as well) since <strong>0.18281 > 0.10</strong>.</li> 
+                <li>There is no sufficient evidence to conclude the alternative.</li> 
+                <li>Therefore, interface A and B are <strong><u>not</u></strong> statistically significantly different in terms of return rate.</li></ul>
+              <br>
+              <p><strong>In conclusion, neither test shows any significant difference between A and B.</strong> The tests conducted are inconclusive and I would have to do more testing 
+              to decide which interface to deploy.</p>
+              </div>
+          </div>
         </div>
 
-
+      <div class="section" id="takeaways">
+        <h3><strong>V. Takeaways</strong></h3>
+      </div>
 
     </main>
   </body>
