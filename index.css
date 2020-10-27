@@ -11,7 +11,6 @@
     font-size: 1em;
 }
 
-
 main {
     font-family: "Book Antiqua", Arial, Helvetica, sans-serif;
     margin: 0 auto;
@@ -38,7 +37,7 @@ h3 {
 h4 {
     font-size: 1.3vw !important;
     padding-bottom: 0.5vw;
-    color: #60a25c;
+    color: #5c82a2;
 }
 
 
@@ -88,4 +87,31 @@ table {
 
 .results-column {
     flex: 50%;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 4%;
+    z-index: 99;
+    font-size: 2vw;
+    border: none;
+    outline: none;
+    background-color: darkgrey;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    background-color: #555;
+  }
+
+  footer{
+    text-align: right;
+    margin-top: 3vw;
+    padding-bottom: 1vw;
+    color: darkgrey
 }
