@@ -106,9 +106,13 @@
               <td>H<sub>A</sub>: There is association between which interface is used and the return rate, meaning that the return rate is different for interface A and B.</td>
             </tr>
             <tr>
-              <th scope="row" style="background-color: #dfecde">Reasoning of the Hypothesis</th>
-              <td>tbd</td>
-              <td>tbd</td>
+              <th scope="row" style="background-color: #dfecde">Reasoning behind the Alternative Hypothesis</th>
+              <td>I expect interface B to have a shorter time to completion than A because vertical layout is faster to read than a 2 by 2 grid layout where
+                users would have to read in a Z-pattern. In addition, the prices of cacti in interface B are shown in ascending order which are easier for user to memorize. 
+              </td>
+              <td>I expect there to be some dependence of return rate on which interface is used due to the difference in the layout and the position of the cart icon. The fact 
+                that the cart icon is closer to the cactus products in interface A might entice user to check out earlier without reaching $150 worth of order, thus increasing the return rate.
+              </td>
             </tr>
           </tbody>
         </table>
@@ -116,14 +120,14 @@
 
       <div class="section" id="data">
         <h3><strong>III. Data</strong></h3>
-        <p>I distributed the deployed Heroku link to my peers and recorded each user's interactions with the interface. The user logs were filtered into the following format for 
-          further analysis:</p>
+        <p>I distributed the deployed website link to my peers who would get either interface A or B with a 50%/50% chance. I recorded each user's interactions with the interface and filtered the user 
+          logs into the following format for further analysis:</p>
         <img class="logs-img" src="images/logs_format.PNG" alt="logs format">
         <br>
         <p>I went over the logs user by user, interpreted what each user did on the website, and took out the ones where the user only loaded the page but did nothing. I then calculated 
-          the time to completion for each user session and counted number of users who returned for each interface. In total, 41 valid observations were collected from 40 unique users (one user
-          interacted with both interfaces). There are <strong>19 and 22 data points for interface A and B, respectively</strong>.</p>
-        <h4 style="margin-bottom: 0.5vw;"><Strong>Distributions of the data collected:</Strong></h4>
+          the time to completion for each user session and counted number of users who returned for each interface. In total, 41 valid observations were collected from 39 unique users (one user
+          interacted with A once and B twice). There are <strong>19 and 22 data points for interface A and B, respectively</strong>.</p>
+        <h4 style="margin-bottom: 0.5vw"><Strong>Distributions of the data collected:</Strong></h4>
         <img src="images/data.jpg" alt="data distributions" style="width: 100%; height: auto">
       </div>
 
@@ -140,17 +144,17 @@
             <div class="results-column my-auto">
               <h4><strong><u>Time to Completion:</strong></u></h4>
               <ul style="margin-left: 1.5vw">
-                <li>We <strong>fail to reject the null hypothesis</strong> at the 10% significance level (and thus fail to reject at 5% and 1% levels as well) since <strong>0.18643 > 0.10</strong>.</li> 
-                <li>There is no sufficient evidence to conclude the alternative.</li> 
+                <li>We <strong>fail to reject the null hypothesis</strong> at the 10% significance level (and thus fail to reject at 5% and 1% levels) since <strong>0.18643 > 0.10</strong>.</li> 
+                <li>There is no sufficient evidence to conclude the alternative hypothesis.</li> 
                 <li>Therefore, interface A and B are <strong><u>not</u></strong> statistically significantly different in terms of time to completion.</li></ul>
                 <br>
                 <h4><strong><u>Return Rate:</strong></u></h4>
                 <ul style="margin-left: 1.5vw">
-                <li>We <strong>fail to reject the null hypothesis</strong> at the 10% significance level (and thus fail to reject at 5% and 1% levels as well) since <strong>0.18281 > 0.10</strong>.</li> 
-                <li>There is no sufficient evidence to conclude the alternative.</li> 
+                <li>We <strong>fail to reject the null hypothesis</strong> at the 10% significance level (and thus fail to reject at 5% and 1% levels) since <strong>0.18281 > 0.10</strong>.</li> 
+                <li>There is no sufficient evidence to conclude the alternative hypothesis.</li> 
                 <li>Therefore, interface A and B are <strong><u>not</u></strong> statistically significantly different in terms of return rate.</li></ul>
               <br>
-              <p><strong>In conclusion, neither test shows any statistically significant difference between A and B.</strong>The tests conducted are inconclusive and I would need to do more testing 
+              <p><strong>In conclusion, neither test shows any statistically significant difference between A and B.</strong> The tests conducted are inconclusive and I would need to do more testing 
               to decide which interface to deploy.</p>
               </div>
           </div>
@@ -161,11 +165,16 @@
         <p>Reflecting on the entire process, I think the following limitations might have affected the test results:</p>
         <ul style="margin-left: 1.5vw">
           <li>While the layout of items could potentially affect time to completion, it might not have a significant impact in this case due to the small number of items required for the users to go through (i.e., 
-            there are only four cacti on the website).
-          </li>
-          <li></li>
+            there are only four cacti on the website).</li>
+          <li>The sample size in the testing was relatively small (i.e., 41 valid observations from 39 unique users) due to practical limitations. It would be better if we can use a sample size calculator to 
+              predict the needed sample size and prevent finding a false result.</li>
+          <li>The variations in layout and the cart icon might have counteracted each other. Multiple testing correction might help to deal with this issue.</li>
+          <li>I conducted A\B testing with a small sample size only once. Repeated testing might help us to cross-validate the results.</li>
         </ul>
-        <p>Though this particular test gives inconclusive results, it would be interesting in the future to increase the number of cacti listed on the website and perform the test again with a larger number of users.</p>
+        <p>
+          Though this particular test gives us inconclusive results about the effect of layout on user experience, it would be interesting in the future to increase the number of cacti listed on the website and 
+          perform the test again with a larger number of users.
+        </p>
       </div>
 
       <footer>
