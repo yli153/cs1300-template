@@ -1,1 +1,79 @@
-/* Put your style information here! */
+/* roboto-regular - latin */
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/roboto-v20-latin-regular.eot'); /* IE9 Compat Modes */
+	src: local('Roboto'), local('Roboto-Regular'),
+		 url('../fonts/roboto-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('../fonts/roboto-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+		 url('../fonts/roboto-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
+		 url('../fonts/roboto-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('../fonts/roboto-v20-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+  }
+
+main {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    padding: 0px 120px 0 120px;
+    background-color: white;
+    min-height: 100vh;
+}
+
+.nav-item {
+    font-size: 1.2vw !important;
+}
+
+h1 {
+    font-size: 2.75vw !important;
+    margin-right: 5px;
+    text-shadow: 0.07em 0.07em #eabfb9;
+    text-align: right;
+    padding: 1vw;
+    margin-bottom: 3px !important;
+}
+
+h2{
+    font-size: 2.25vw !important;
+}
+
+h3 {
+    font-size: 1.5vw !important;
+    padding-bottom: 0.5vw;
+    color: #b86b77;
+}
+
+p {
+    font-size: 1.2vw !important;
+}
+
+.section {
+    margin-top: 3vw;
+}
+
+.navbar {
+    margin-bottom: 1em;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 4%;
+    z-index: 99;
+    font-size: 2vw;
+    border: none;
+    outline: none;
+    background-color: darkgrey;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    background-color: #555;
+  }
+
+
+
