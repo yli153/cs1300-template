@@ -21,7 +21,7 @@ main {
 }
 
 .nav-item {
-    font-size: 1.2vw !important;
+    font-size: 1.15vw !important;
 }
 
 h1 {
@@ -46,6 +46,11 @@ h3 {
 p {
     font-size: 1.2vw !important;
     margin-bottom: 1vw !important;
+}
+
+ol {
+    font-size: 1vw !important;
+    background-color: snow;
 }
 
 .section {
@@ -77,4 +82,23 @@ p {
   }
 
 
+@media only screen and (min-width: 420px) and (max-width: 870px) {
+    main {
+        padding: 30px 30px 0 30px;
+    }
+    
+    .navbar-toggler {
+        font-size: 0.8em !important;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    main {
+        padding: 30px 20px 0 20px;
+    }
+
+    .navbar-toggler {
+        font-size: 0.5em !important;
+    }
+}
 
