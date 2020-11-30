@@ -61,6 +61,11 @@ ol {
     margin-bottom: 1em;
 }
 
+.app-demo {
+    width: 80%;
+    height: auto;
+}
+
 #myBtn {
     display: none;
     position: fixed;
